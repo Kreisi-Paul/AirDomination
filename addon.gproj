@@ -1,0 +1,8 @@
+GameProject {
+ ID "AirDomination"
+ GUID "66AD44DFB1760089"
+ TITLE "Air Domination"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}

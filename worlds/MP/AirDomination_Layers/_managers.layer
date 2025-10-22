@@ -1,0 +1,97 @@
+SCR_AIWorld SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ components {
+  NavmeshWorldComponent "{5584F30E67F617AD}" {
+   NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{66AD44DE9E013566}" {
+     NavmeshFile "{AD5F99CD7C59D5E0}worlds/GameMaster/Navmeshes/GM_Eden.nmn"
+    }
+   }
+  }
+  NavmeshWorldComponent "{5584F30EEFEE1223}" {
+   NavmeshSettings ChimeraNavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{60CA9BE5536BF701}" {
+     NavmeshFile "{C35ECF3276824654}worlds/GameMaster/Navmeshes/GM_Eden_vehicles.nmn"
+    }
+   }
+  }
+  NavmeshWorldComponent "{5C8C9B750D124A63}" {
+   NavmeshSettings NavmeshWorld "{5C8C9B750B60C6E2}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{5C90BD0EC793647D}" {
+     NavmeshFile "{5E19E60F26327356}worlds/MP/Navmeshes/LowResEden.nmn"
+    }
+   }
+  }
+ }
+ coords 7114.537 103.567 6279.017
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "SCR_AIWorld: "\
+   "Configure navigation mesh"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 7114.537 102.942 6284.017
+}
+SCR_FactionManager AirDomination_FactionManager : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionManager_Editor.et" {
+ coords 7113.177 107.481 6275.966
+ Factions {
+  SCR_Faction "{56DEAC40D2DBC8B1}" {
+   m_bIsPlayable 1
+  }
+  SCR_Faction "{56DEAC40D3C2E623}" {
+   m_bShowInWelcomeScreenIfNonPlayable 0
+  }
+  SCR_Faction "{56DEAC40D132400B}" {
+   m_bShowInWelcomeScreenIfNonPlayable 0
+  }
+ }
+ m_bCanChangeFactionsPlayable 0
+}
+RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
+ coords 7114.537 103.057 6283.017
+}
+SCR_BaseGameMode GameModeSF : "{ECEEDB2D3737204B}Prefabs/Systems/ScenarioFramework/GameModeSF.et" {
+ components {
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
+   }
+  }
+ }
+ coords 7114.537 103.771 6278.017
+}
+ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+ coords 7114.537 102.785 6285.017
+}
+SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFramework/Tasks/TaskManager.et" {
+ coords 7114.537 103.491 6280.017
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "TaskManager: "\
+   "Needed for task generation"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+SCR_LoadoutManager AirDomination_LoadoutManager : "{2831F6B120C2F698}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
+ coords 7113.876 104.458 6276.479
+ m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{66AD44DE0578EEE2}" {
+   m_sLoadoutName "Pilot"
+   m_sLoadoutResource "{42A502E3BB727CEB}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_HeliPilot.et"
+   m_sLoadoutImage "{F293529C376FB00C}UI/Textures/EditorPreviews/Characters/BLUFOR/US_Army/Character_US_HeliPilot.edds"
+   m_sAffiliatedFaction "US"
+  }
+ }
+}
